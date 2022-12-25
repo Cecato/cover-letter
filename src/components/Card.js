@@ -11,6 +11,11 @@ class Card extends HTMLElement {
         const componentRoot = document.createElement("div");
         componentRoot.setAttribute("class", "card");
 
+        const cardContent = document.createElement("p");
+        cardContent.textContent = this.getAttribute("content");
+
+        componentRoot.appendChild(cardContent);
+
         return componentRoot;
     }
   
@@ -19,15 +24,24 @@ class Card extends HTMLElement {
         style.textContent = `
             .card{
                 width: 70%;
-                height: 90%;
-                border: 1px solid black;
-                position:absolute;
+                height: auto;
+                padding: 5px;
                 top: 0;
                 left:0;
                 bottom:0;
                 right: 0;
-                margin: auto;
-                
+                margin-left:auto;
+                margin-right: auto;
+                margin-top: 5%;
+                background-color: black;
+                border-radius: 15px;
+            }
+
+            .card > p{
+                font-size: 25px;
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
             }
 
             @media (max-width: 600px){

@@ -1,4 +1,4 @@
-class Card extends HTMLElement {
+class CardFooter extends HTMLElement {
     constructor() {
         super();
 
@@ -9,39 +9,7 @@ class Card extends HTMLElement {
   
     build() {
         const componentRoot = document.createElement("div");
-        componentRoot.setAttribute("class", "card");
-
-        //top
-        const cardtop = document.createElement("div");
-        cardtop.setAttribute("class", "card__top");
-
-        //img top
-        const topImage = document.createElement("img");
-        topImage.src = "assets/imgProfile.png";
-        topImage.alt = "Gustavo Cecato Photo";
-        cardtop.appendChild(topImage);
-
-        //text top
-        const title = document.createElement("h1");
-        title.textContent =  "Gustavo Cecato";
-        cardtop.appendChild(title);
-
-        //Body
-        const cardBody = document.createElement("div");
-        cardBody.setAttribute("class", "card__body");
-
-        //footer
-        const cardFooter = document.createElement("div");
-        cardFooter.setAttribute("class", "card__footer");
-
-        //img footer
-        const footerImage = document.createElement("img");
-        footerImage.src = "assets/defaultProfile.png";
-        cardFooter.appendChild(footerImage);        
-
-        componentRoot.appendChild(cardtop);
-        componentRoot.appendChild(cardBody);
-        componentRoot.appendChild(cardFooter);
+        componentRoot.setAttribute("class", "card__footer");
 
         return componentRoot;
     }
@@ -49,66 +17,20 @@ class Card extends HTMLElement {
     styles(){
         const style = document.createElement("style");
         style.textContent = `
-            .card{
-                width: 70%;
-                height: 90%;
-                border: 1px solid black;
-                position:absolute;
-                top: 0;
-                left:0;
-                bottom:0;
-                right: 0;
-                margin: auto;
-                
-            }
-            .card__top{
-                width: 100%;
-                height: auto;
-                border-bottom: 1px solid black;
-                
-            }
-            
-            .card__top > img{
-                width: 75px;
-                height: 75px;
-                border-radius: 50%;
-                float:left;
-                background-position: center;
-                background-size: cover;
-            }
-
-            .card__top > h1{
-                font-size: 25px;
-                color: black;
-                text-decoration: none;
-                font-weight: bold;
-                
-            }
-
-
-            .card__body{
-                width: 100%;
-                height: 80%;
-                border: 1px solid black;
-
-            }
 
             .card__footer{
-                width: 100%;
-                height: auto;
-                border: 1px solid red;
-                
-            }
-
-            .card__footer > img{
-                width: 50px;
+                width: 70%;
                 height: 50px;
-                background-position: center;
-                background-size: cover;
+                border: 1px solid black;
+                bottom: 0;
+                margin-left: 15%;
+                position: fixed;
+                background-color: red;
             }
 
             @media (max-width: 600px){
-                .card{
+                .card__footer{
+                    margin-left: 0;
                     width: 100%;
                 }
             }
@@ -119,4 +41,4 @@ class Card extends HTMLElement {
     }
 }
   
-customElements.define("card-component", Card);
+customElements.define("card-footer", CardFooter);
