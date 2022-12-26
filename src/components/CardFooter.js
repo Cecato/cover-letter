@@ -11,6 +11,10 @@ class CardFooter extends HTMLElement {
         const componentRoot = document.createElement("div");
         componentRoot.setAttribute("class", "card__footer");
 
+        const makimaImg = document.createElement("img");
+        makimaImg.src = "assets/makima.png";
+        componentRoot.appendChild(makimaImg);
+
         return componentRoot;
     }
   
@@ -19,13 +23,19 @@ class CardFooter extends HTMLElement {
         style.textContent = `
 
             .card__footer{
-                width: 70%;
+                width: auto;
                 height: 50px;
-                border: 1px solid black;
                 bottom: 0;
-                margin-left: 15%;
+                margin-left: 0;
                 position: fixed;
                 background-color: red;
+                
+            }
+
+            .card__footer > img{
+                width: auto;
+                height: 30em;
+                drop-shadow(5px 5px 5px rgba(0,0,0,1));
             }
 
             @media (max-width: 600px){

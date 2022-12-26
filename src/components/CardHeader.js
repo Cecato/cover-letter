@@ -35,28 +35,30 @@ class CardHeader extends HTMLElement {
       .card__header{
         width: 70%;
         height: auto;
-        border-bottom: 0px solid orange;
-        background-color: none;
         margin-left: 15%;
-        text-align: center;         
+        text-align: center; 
+               
       }
       
       .card__header > img{
-        width: 100px;
-        height: 100px;
+        width: 10em;
+        height: 10em;
         border-radius: 50%;
         margin-top: 2%;
-        border: double 0.15em transparent;
-        background-image: rgba(255,255,255,0.4);
-        background-origin: border-box;
-        background-clip: content-box, border-box;
         transition: 0.8s linear;
         
       }
 
       .card__header > img:hover{
         transition: 0.5s linear;
-        box-shadow: 0px 0px 16em 6em rgba(255,0,0, 0.8);
+        
+      }
+
+      .card__header > .card__icons{
+        width: 100%;
+        height: 5em;
+        background-color: green;
+        border-bottom: 2px solid white;
       }
 
       .card__background{
@@ -75,18 +77,9 @@ class CardHeader extends HTMLElement {
       }
 
       .card__background > img:hover{
-        transition: 0.6s linear;
-        opacity: 0.9;
+        transition: 0.8s linear;
+        opacity: 1;
         
-      }
-
-      .card__background > h1{
-        font-size: 50px;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        position:relative;
-        height: 0px;
       }
 
 
@@ -94,10 +87,16 @@ class CardHeader extends HTMLElement {
         .card__header{
           margin-left: 0;
           width: 100%;
+          
+        }
+        .card__header>img{
+          width: calc(10rem/1.3);
+          height: calc(10rem/1.3);
+          
         }
         .card__background > img{
           width: 100%;
-          height: 5em;
+          height: 6em;
           position:relative;
           
         }

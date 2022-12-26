@@ -23,7 +23,7 @@ class Card extends HTMLElement {
         const style = document.createElement("style");
         style.textContent = `
             .card{
-                width: 70%;
+                width: 90%;
                 height: auto;
                 padding: 5px;
                 top: 0;
@@ -33,8 +33,10 @@ class Card extends HTMLElement {
                 margin-left:auto;
                 margin-right: auto;
                 margin-top: 5%;
-                background-color: black;
-                border-radius: 15px;
+                background-color: transparent;
+                border-radius: 15%;
+                border-bottom: 2px dashed black;
+                
             }
 
             .card > p{
@@ -46,7 +48,7 @@ class Card extends HTMLElement {
 
             @media (max-width: 600px){
                 .card{
-                    width: 100%;
+                    width: 95%;
                 }
             }
 
