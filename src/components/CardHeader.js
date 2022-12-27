@@ -14,14 +14,15 @@ class CardHeader extends HTMLElement {
 
     const headerImage = document.createElement("img");
     headerImage.src = "assets/imgProfile.png";
-    componentRoot.appendChild(headerImage);
+   
 
     const cardImg = document.createElement("div");
     cardImg.setAttribute("class", "card__background");
     componentRoot.appendChild(cardImg);
+    
 
     const cardImgBackground = document.createElement("img");
-    cardImgBackground.src = "assets/cards.png";
+    cardImgBackground.src = randomImg();
     cardImg.appendChild(cardImgBackground);
 
 
@@ -41,17 +42,18 @@ class CardHeader extends HTMLElement {
       }
       
       .card__header > img{
-        width: 10em;
-        height: 10em;
+        width: 7em;
+        height: 7em;
         border-radius: 50%;
         margin-top: 2%;
         transition: 0.8s linear;
+        opacity: 0.2;
         
       }
 
       .card__header > img:hover{
-        transition: 0.5s linear;
-        
+        transition: 0.8s linear;
+        opacity: 0.6;
       }
 
       .card__header > .card__icons{
@@ -106,6 +108,15 @@ class CardHeader extends HTMLElement {
     return style;
   }
 
+}
+
+function randomImg(){
+  const pathImg = [
+    "assets/cards/cards.png",
+    "assets/cards/cards1.png",
+    "assets/cards/cards2.png"];
+  
+  return pathImg[Math.floor(Math.random()*3)];
 }
 
 customElements.define("card-header", CardHeader);

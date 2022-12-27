@@ -12,3 +12,23 @@ body{
     background-color: #161616;
 }
 
+.socialmidia{
+    width: 100%;
+    height: auto;
+    background-color: rgb(19, 19, 19);
+    float: left;
+    text-align: center;
+}
+
+.socialmidia> img{
+    width: 50px;
+    height: 50px;
+    border-top: 2px solid rgba(255, 255, 255, 0.671);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.socialmidia >  img:hover{
+    transform: scale(0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.938);
+}
