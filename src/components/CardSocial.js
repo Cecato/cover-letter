@@ -13,7 +13,7 @@ class CardSocial extends HTMLElement {
         componentRoot.setAttribute("class", "card__social");
 
         const titleProfile = document.createElement("h1");
-        titleProfile.textContent = `<${ titleName( this.getAttribute("title") )}/>`|| "<error/>";
+        titleProfile.textContent = `<${ this.getAttribute("title").replace(/ /gi, ".")}/>`|| "<error/>";
         componentRoot.appendChild(titleProfile);
 
         return componentRoot;
@@ -32,30 +32,26 @@ class CardSocial extends HTMLElement {
           display: inline-block;
         }
 
-        .card__social > img{
-          width: 3.5em;
-          height: 3.5em;
-          border-radius: 50%;
-          margin: 0.3em 1em 0.3em 1em;
-          transition: 0.8s linear;
-          opacity: 0.6;
-
-        }
-
         .card__social > h1{
           color: rgba(233, 233, 233, 0.74);;
           margin-left: 1em;
           margin-top: 20px;
           font-size: 1.2em;
         }
+
+        @media ( max-width < 640px){
+          .card__social{
+            text-align: center;
+          }
+          .card__social > h1{
+            margin-left: 0;
+            
+          }
+        }
       `;
 
       return style;
     }
-}
-
-function titleName(teste){
-  return teste;
 }
 
 customElements.define("card-social", CardSocial);
