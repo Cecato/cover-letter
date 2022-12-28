@@ -112,9 +112,9 @@ class CardHeader extends HTMLElement {
 
 function randomImg(){
   const pathImg = [
-    "assets/cards/cards.png",
-    "assets/cards/cards1.png",
-    "assets/cards/cards2.png"];
+    "src/assets/cards/cards.png",
+    "src/assets/cards/cards1.png",
+    "src/assets/cards/cards2.png"];
   
   return pathImg[Math.floor(Math.random()*3)];
 }

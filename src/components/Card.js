@@ -34,7 +34,6 @@ class Card extends HTMLElement {
                 margin-right: auto;
                 margin-top: 5%;
                 background-color: transparent;
-                border-radius: 15%;
                 border-bottom: 2px dashed black;
                 
             }

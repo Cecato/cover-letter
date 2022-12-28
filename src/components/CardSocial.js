@@ -12,16 +12,8 @@ class CardSocial extends HTMLElement {
         const componentRoot = document.createElement("div");
         componentRoot.setAttribute("class", "card__social");
 
-        const imgProfile = document.createElement("img");
-        imgProfile.src = "src/assets/imgProfile.png";  
-        componentRoot.appendChild(imgProfile);
-
-        const divTitle = document.createElement("div");
-        divTitle.setAttribute("class", "card__title");
-        componentRoot.appendChild(divTitle);
-
         const titleProfile = document.createElement("h1");
-        titleProfile.textContent = "<Gustavo Cecato/>";
+        titleProfile.textContent = `<${ titleName( this.getAttribute("title") )}/>`|| "<error/>";
         componentRoot.appendChild(titleProfile);
 
         return componentRoot;
@@ -37,7 +29,7 @@ class CardSocial extends HTMLElement {
           background-color: rgb(19, 19, 19);
           text-align: left;
           margin-bottom: 1%;
-          float: left;
+          display: inline-block;
         }
 
         .card__social > img{
@@ -46,30 +38,24 @@ class CardSocial extends HTMLElement {
           border-radius: 50%;
           margin: 0.3em 1em 0.3em 1em;
           transition: 0.8s linear;
-          opacity: 1;
-          float: left;
-        }
+          opacity: 0.6;
 
-        .card__title{
-          width: 50px;
-          height: 50px;
-          background-color: white;
-          float: left;
-          margin: 0.3em 1em 0.3em 0.3em;
         }
 
         .card__social > h1{
-          color: white;
+          color: rgba(233, 233, 233, 0.74);;
           margin-left: 1em;
           margin-top: 20px;
-          height: 100%;
           font-size: 1.2em;
-          backgroun-color: white;
         }
       `;
 
       return style;
     }
+}
+
+function titleName(teste){
+  return teste;
 }
 
 customElements.define("card-social", CardSocial);
