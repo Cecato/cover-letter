@@ -13,8 +13,15 @@ class Card extends HTMLElement {
 
         const cardContent = document.createElement("p");
         cardContent.textContent = this.getAttribute("content");
-
         componentRoot.appendChild(cardContent);
+
+        const cardBodyOut = document.createElement("div");
+        cardBodyOut.setAttribute("class", "card__body__out");
+        componentRoot.appendChild(cardBodyOut);
+
+        const cardBodyInner = document.createElement("div");
+        cardBodyInner.setAttribute("class", "card__body__inner");
+        cardBodyOut.appendChild(cardBodyInner);
 
         return componentRoot;
     }
@@ -23,31 +30,45 @@ class Card extends HTMLElement {
         const style = document.createElement("style");
         style.textContent = `
             .card{
-                width: 90%;
+                width: 80%;
                 height: auto;
-                padding: 5px;
-                top: 0;
-                left:0;
-                bottom:0;
-                right: 0;
                 margin-left:auto;
                 margin-right: auto;
                 margin-top: 5%;
+                padding: 1%;
                 background-color: transparent;
-                border-bottom: 2px dashed black;
+               
                 
             }
 
-            .card > p{
-                font-size: 25px;
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
+            .card__body__out{
+                width: 80%;
+                height: 10em;
+                background-color: rgb(30,30,30);               
+                margin: auto;
+                padding-top: 5%;
+                opacity: 0.6;
+                transition: 0.3s linear;
+            }
+
+            .card__body__inner{
+                width: 100%;
+                height: 120%;
+                background-color: rgb(17,17,17);               
+                margin-left: 5%;
+               
+                                
+            }
+
+            .card__body__out:hover{
+                transition: 0.5s linear;
+                transform: scale(1.2);
+                opacity: 1;
             }
 
             @media (max-width: 600px){
                 .card{
-                    width: 95%;
+                    width: 100%;
                 }
             }
 

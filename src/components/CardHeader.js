@@ -25,11 +25,12 @@ class CardHeader extends HTMLElement {
     style.textContent = `
       .card__header{
         width: 100%;
-        height: auto;           
+        height: auto;  
+        text-align: center;         
       }
 
       .card__header > img{
-        width: 100%;
+        width: 80%;
         height: auto;
       
         opacity: 0.5;
