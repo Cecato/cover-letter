@@ -26,14 +26,14 @@ class CardSocial extends HTMLElement {
         .card__social{
           width: 100%;
           height: auto;
-          background-color: rgb(19, 19, 19);
+          background-color: var(--two-color);
           text-align: left;
           margin-bottom: 1%;
           display: inline-block;
         }
 
         .card__social > h1{
-          color: rgba(233, 233, 233, 0.74);;
+          color: var(--four-color);
           margin-left: 1em;
           margin-top: 20px;
           font-size: 1.2em;

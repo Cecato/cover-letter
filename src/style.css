@@ -1,21 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+:root{
+    --one-color: rgb(25, 25, 25);
+    --two-color: rgb(16, 15, 15);
+    --three-color: rgba(5, 27, 23, 0.925);
+    --four-color: rgba(233, 233, 233, 0.74);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Press Start 2P', sans-serif;
-    position: relative;
 }
 
 body{
-    width: 100%;
-    height: 100%;
-    background-color: #161616;
-    
+    background-color: var(--one-color);    
 }
 
-/*
-rgba(233, 233, 233, 0.74);
 
 

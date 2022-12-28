@@ -11,10 +11,6 @@ class Card extends HTMLElement {
         const componentRoot = document.createElement("div");
         componentRoot.setAttribute("class", "card");
 
-        const cardContent = document.createElement("p");
-        cardContent.textContent = this.getAttribute("content");
-        componentRoot.appendChild(cardContent);
-
         const cardBodyOut = document.createElement("div");
         cardBodyOut.setAttribute("class", "card__body__out");
         componentRoot.appendChild(cardBodyOut);
@@ -22,6 +18,10 @@ class Card extends HTMLElement {
         const cardBodyInner = document.createElement("div");
         cardBodyInner.setAttribute("class", "card__body__inner");
         cardBodyOut.appendChild(cardBodyInner);
+
+        const textBody = document.createElement("p");
+        textBody.textContent = this.getAttribute("content");
+        cardBodyInner.appendChild(textBody);
 
         return componentRoot;
     }
@@ -44,20 +44,25 @@ class Card extends HTMLElement {
             .card__body__out{
                 width: 80%;
                 height: 10em;
-                background-color: rgb(30,30,30);               
+                background-color: var(--two-color);               
                 margin: auto;
-                padding-top: 5%;
-                opacity: 0.6;
+                padding-top: 3%;
+                opacity: 0.4;
                 transition: 0.3s linear;
             }
 
             .card__body__inner{
                 width: 100%;
                 height: 120%;
-                background-color: rgb(17,17,17);               
+                background-color: var(--three-color);               
                 margin-left: 5%;
                
                                 
+            }
+
+            .card__body__inner > p{
+                font-size: 20px;
+                color: white;
             }
 
             .card__body__out:hover{
@@ -68,7 +73,11 @@ class Card extends HTMLElement {
 
             @media (max-width: 600px){
                 .card{
-                    width: 100%;
+                    width: 100%;                   
+                    padding: 0;
+                    margin-top: 10%;
+                    margin-bottom: 20%;
+                      
                 }
             }
 
