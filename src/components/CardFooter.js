@@ -25,6 +25,20 @@ class CardFooter extends HTMLElement {
         });
         componentRoot.appendChild(instagramImg);
 
+        const linkedinImg = document.createElement("img");
+        linkedinImg.src = "src/assets/socialmedia/linkedin.png";
+        linkedinImg.addEventListener("click", function(){
+            window.open('https://www.linkedin.com/in/gustavo-cecato-b1b9821b8/', '_blank');
+        });
+        componentRoot.appendChild(linkedinImg);
+
+        const beecrowdImg = document.createElement("img");
+        beecrowdImg.src = "src/assets/socialmedia/beecrowd.png";
+        beecrowdImg.addEventListener("click", function(){
+            window.open('https://www.beecrowd.com.br/judge/pt/profile/432392', '_blank');
+        });
+        componentRoot.appendChild(beecrowdImg);
+
 
         return componentRoot;
     }
@@ -45,20 +59,20 @@ class CardFooter extends HTMLElement {
             }
 
             .card__footer > img{
-                width: 5em;
-                height: 5em;
+                width: 4em;
+                height: 4em;
                 padding: 1em;
                 border-top: 2px solid var(--four-color);
                 transition: all 0.5s ease-in-out;
                 border-height: thin;
-                margin-left: 10px;
-                margin-right: 10px;
+                margin-left: 1em;
+                margin-right: 1em;
                 opacity: 0.8;
                 
             }
 
             .card__footer > img:hover{
-                transition: all 1s ease-in-out;
+                transition: all 0.7s ease-in-out;
                 background-color: var(--four-color);
                 border-radius: 5%;
                 opacity: 0.8;
