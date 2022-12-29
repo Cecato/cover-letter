@@ -69,7 +69,7 @@ function randomImg(){
     "src/assets/cards/cards1.png",
     "src/assets/cards/cards2.png"];
   
-  return pathImg[Math.floor(Math.random()*3)];
+  return pathImg[Math.floor(Math.random()*pathImg.length)];
 }
 
 customElements.define("card-header", CardHeader);

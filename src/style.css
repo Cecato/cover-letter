@@ -2,9 +2,11 @@
 
 :root{
     --one-color: rgb(25, 25, 25);
-    --two-color: rgb(16, 15, 15);
-    --three-color: rgba(5, 27, 23, 0.925);
-    --four-color: rgba(233, 233, 233, 0.74);
+    --two-color: rgba(15, 15, 15, 0.8);
+    --three-color: rgba(15, 15, 15, 1);
+    --four-color: rgba(233, 233, 233, 0.9);
+    --five-color: rgba(233, 233, 233, 0.3);
+    --six-color: rgb(103, 137, 131);
 }
 
 *{
@@ -15,7 +17,14 @@
 }
 
 body{
+    margin: 0;
     background-color: var(--one-color);    
+}
+
+@media (max-width: 640px){
+    body{
+        margin: 0;
+    }
 }
 
 

@@ -41,11 +41,12 @@ class CardSocial extends HTMLElement {
 
         @media ( max-width < 640px){
           .card__social{
+            width: 100%;
             text-align: center;
           }
           .card__social > h1{
             margin-left: 0;
-            
+            text-align: center;
           }
         }
       `;
