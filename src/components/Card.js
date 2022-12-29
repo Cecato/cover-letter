@@ -46,7 +46,6 @@ class Card extends HTMLElement {
                 height: 10em;
                 background-color: transparent;               
                 margin: auto;
-                /*padding-top: 3%;*/
                 opacity: 0.7;
                 transition: 0.5s linear;
                 
@@ -56,7 +55,6 @@ class Card extends HTMLElement {
                 width: 100%;
                 height: 100%;
                 background-color: var(--three-color);               
-                /*margin-left: 5%;*/
                 transition: 0.5s linear;
                 padding: 2% 2% 0 2%;
                 
@@ -67,7 +65,7 @@ class Card extends HTMLElement {
                 font-size: 20px;
                 color: white;
                 margin: auto;
-                line-height: 120%;
+                line-height: 130%;
                 text-align: justify;
                 text-indent: 2em;
             }
@@ -89,18 +87,46 @@ class Card extends HTMLElement {
 
             @media (max-width: 600px){
                 .card{
-                    width: 90%;
+                    width: 85%;
                     height: auto;                   
                     padding: 0;
                     margin-top: 10%;
-                    margin-bottom: 20%;
+                    margin-bottom: 10%;
                 }
 
                 .card__body__out{
-                    width: 80%;
-                    height: 100%;
+                    width: auto;
+                    height: auto;
                     
                 }
+
+                .card__body__out:hover{
+                    transition: 0.5s linear;
+                    transform: scale(1);
+                    padding-top: 0;
+                    opacity: 1;
+                    box-shadow: -5px -5px 10px rgba(5, 5, 5, 0.5);
+                    background-color: transparent;
+                }
+
+                .card__body__out:hover .card__body__inner{
+                    box-shadow: -5px -5px 10px rgba(15, 15, 15, 0.5);
+                    margin-left: 0;
+                    transition: 0.5s linear;
+                }
+                
+                .card__body__inner{
+                    padding: 10px;
+                    margin-left:0;
+                    border: 2px solid white; 
+                }
+                .card__body__inner > p{
+                    font-size: 12px;
+                    text-indent:0;
+                    text-align: left;
+                    
+                }
+
             }
 
         `;

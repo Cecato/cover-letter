@@ -85,6 +85,11 @@ class CardFooter extends HTMLElement {
                     width: 100%;
                     
                 }
+
+                .card__footer > img{
+                    width: 3em;
+                    height: 3em;
+                }
             }
 
         `;
