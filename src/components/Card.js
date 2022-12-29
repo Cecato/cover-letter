@@ -77,12 +77,14 @@ class Card extends HTMLElement {
                 opacity: 1;
                 box-shadow: -5px -5px 10px rgba(5, 5, 5, 0.5);
                 background-color: ${randomColor()};
+                border: 2px solid var(--six-color); 
             }
 
             .card__body__out:hover .card__body__inner{
                 box-shadow: -5px -5px 10px rgba(15, 15, 15, 0.5);
                 margin-left: 5%;
                 transition: 0.5s linear;
+                border: 2px solid white; 
             }
 
             @media (max-width: 600px){
@@ -107,6 +109,7 @@ class Card extends HTMLElement {
                     opacity: 1;
                     box-shadow: -5px -5px 10px rgba(5, 5, 5, 0.5);
                     background-color: transparent;
+                    border: 0;
                 }
 
                 .card__body__out:hover .card__body__inner{
@@ -118,7 +121,7 @@ class Card extends HTMLElement {
                 .card__body__inner{
                     padding: 10px;
                     margin-left:0;
-                    border: 2px solid white; 
+                    border: 2px solid transparent; 
                 }
                 .card__body__inner > p{
                     font-size: 12px;
